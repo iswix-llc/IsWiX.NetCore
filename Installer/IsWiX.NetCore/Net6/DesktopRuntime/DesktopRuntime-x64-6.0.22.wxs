@@ -1,0 +1,27 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+	<Fragment>
+		<util:RegistrySearchRef Id="findDOTNETVersion"></util:RegistrySearchRef>
+		<util:RegistrySearchRef Id="findDOTNETDesktop"></util:RegistrySearchRef>
+		<PackageGroup Id="DotNetDesktop6022Redist">
+			<ExePackage Id="DotNetDesktop6022" 
+						DetectCondition="DOTNETDESKTOPINSTALLED and DOTNETVERSION &gt;= &quot;6.0.22&quot;" 
+						Permanent="yes" 
+						Vital="no" 
+						InstallArguments="windowsdesktop-runtime-6.0.22-win-x64.exe /install /quiet /norestart" 
+						RepairArguments="windowsdesktop-runtime-6.0.22-win-x64.exe /repair /quiet /norestart" 
+						UninstallArguments="windowsdesktop-runtime-6.0.22-win-x64.exe /uninstall /quiet /norestart">
+				<ExePackagePayload
+							Description="Microsoft Windows Desktop Runtime - 6.0.22 (x64)"
+							ProductName="Microsoft Windows Desktop Runtime - 6.0.22 (x64)"
+							Name="Windows Desktop Runtime Environment - 6.0.22 (x64)"
+							DownloadUrl="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.22-windows-x64-installer"
+							Hash="448EE5CC3DEA9C3C99C5A1BC8895C1A043F9BE1C8A23EA4E1D9A4261B46D21C85DE5D11A81866436C6216EC2DF12DE34A86061682C3856045FAB5ED06571B25A"
+							Size="57538680"
+							Version="6.0.22.32825"
+							/>
+			</ExePackage>
+		</PackageGroup>
+	</Fragment>
+</Wix>
+
+

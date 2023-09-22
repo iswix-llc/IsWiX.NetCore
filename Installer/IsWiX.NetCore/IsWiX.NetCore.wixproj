@@ -1,0 +1,12 @@
+﻿<Project Sdk="WixToolset.Sdk/4.0.0">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <BindFiles>true</BindFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Net7\DesktopRuntime\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Util.wixext" Version="4.0.2" />
+  </ItemGroup>
+</Project>

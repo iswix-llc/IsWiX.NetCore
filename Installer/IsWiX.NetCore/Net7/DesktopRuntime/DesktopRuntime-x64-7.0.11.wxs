@@ -1,0 +1,26 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
+	<Fragment>
+		<netfx:DotNetCoreSearch RuntimeType="desktop" MajorVersion="7" Platform="x64" Variable="DOTNETDESKTOPVERSION"/>
+		<PackageGroup Id="DotNetDesktop7011Redist">
+			<ExePackage Id="DotNetDesktop7011"
+						DetectCondition="DOTNETDESKTOPVERSION &gt;= &quot;7.0.11&quot;"
+						Permanent="yes"
+						Vital="no"
+						InstallArguments="windowsdesktop-runtime-7.0.11-win-x64.exe /install /quiet /norestart"
+						RepairArguments="windowsdesktop-runtime-7.0.11-win-x64.exe /repair /quiet /norestart"
+						UninstallArguments="windowsdesktop-runtime-7.0.11-win-x64.exe /uninstall /quiet /norestart">
+				<ExePackagePayload
+							Description="Microsoft Windows Desktop Runtime - 7.0.11 (x64)"
+							ProductName="Microsoft Windows Desktop Runtime - 7.0.11 (x64)"
+							Name="windowsdesktop-runtime-7.0.11-win-x64.exe"
+							DownloadUrl="https://download.visualstudio.microsoft.com/download/pr/2ce1cbbe-71d1-44e7-8e80-d9ae336b9b17/a2706bca3474eef8ef95e10a12ecc2a4/windowsdesktop-runtime-7.0.11-win-x64.exe"
+							Hash="c5f042dadd878e2cbd1833a73141e64fba2fae10ba5770daac8faf24bb56d7bc61cae8f7664c37fa822db71d0bf05b97733126db396e97e9ceeced596b9a63c1"
+							Size="57837864" 
+							Version="7.0.11.32825"
+							/>
+			</ExePackage>
+		</PackageGroup>
+	</Fragment>
+</Wix>
+
+

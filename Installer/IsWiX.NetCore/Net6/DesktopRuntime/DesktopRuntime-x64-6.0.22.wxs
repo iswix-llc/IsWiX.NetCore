@@ -1,0 +1,26 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
+	<Fragment>
+		<netfx:DotNetCoreSearch RuntimeType="desktop" MajorVersion="6" Platform="x64" Variable="DOTNETDESKTOPVERSION"/>
+		<PackageGroup Id="DotNetDesktop6022Redist">
+			<ExePackage Id="DotNetDesktop6022" 
+						DetectCondition="DOTNETDESKTOPVERSION &gt;= &quot;6.0.22&quot;" 
+						Permanent="yes" 
+						Vital="no" 
+						InstallArguments="windowsdesktop-runtime-6.0.22-win-x64.exe /install /quiet /norestart" 
+						RepairArguments="windowsdesktop-runtime-6.0.22-win-x64.exe /repair /quiet /norestart" 
+						UninstallArguments="windowsdesktop-runtime-6.0.22-win-x64.exe /uninstall /quiet /norestart">
+				<ExePackagePayload
+							Description="Microsoft Windows Desktop Runtime - 6.0.22 (x64)"
+							ProductName="Microsoft Windows Desktop Runtime - 6.0.22 (x64)"
+							Name="windowsdesktop-runtime-6.0.22-win-x64.exe"
+							DownloadUrl="https://download.visualstudio.microsoft.com/download/pr/66a7c4c6-8401-4799-864f-9afddf5a7733/4052f458f0266e25ab1b9c7959ca245f/windowsdesktop-runtime-6.0.22-win-x64.exe"
+							Hash="448ee5cc3dea9c3c99c5a1bc8895c1a043f9be1c8a23ea4e1d9a4261b46d21c85de5d11a81866436c6216ec2df12de34a86061682c3856045fab5ed06571b25a"
+							Size="57538680"
+							Version="6.0.22.32825"
+							/>
+			</ExePackage>
+		</PackageGroup>
+	</Fragment>
+</Wix>
+
+

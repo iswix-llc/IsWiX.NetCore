@@ -7,6 +7,6 @@
     <Folder Include="Net7\DesktopRuntime\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WixToolset.Util.wixext" Version="4.0.2" />
+    <PackageReference Include="WixToolset.Netfx.wixext" Version="4.0.2" />
   </ItemGroup>
 </Project>

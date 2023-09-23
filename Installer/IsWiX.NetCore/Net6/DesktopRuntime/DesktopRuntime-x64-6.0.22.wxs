@@ -1,10 +1,9 @@
-﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
 	<Fragment>
-		<util:RegistrySearchRef Id="findDOTNETVersion"></util:RegistrySearchRef>
-		<util:RegistrySearchRef Id="findDOTNETDesktop"></util:RegistrySearchRef>
+		<netfx:DotNetCoreSearch RuntimeType="desktop" MajorVersion="6" Platform="x64" Variable="DOTNETDESKTOPVERSION"/>
 		<PackageGroup Id="DotNetDesktop6022Redist">
 			<ExePackage Id="DotNetDesktop6022" 
-						DetectCondition="DOTNETDESKTOPINSTALLED and DOTNETVERSION &gt;= &quot;6.0.22&quot;" 
+						DetectCondition="DOTNETDESKTOPVERSION &gt;= &quot;6.0.22&quot;" 
 						Permanent="yes" 
 						Vital="no" 
 						InstallArguments="windowsdesktop-runtime-6.0.22-win-x64.exe /install /quiet /norestart" 

@@ -1,8 +1,0 @@
-﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
-	<Fragment>
-		<util:RegistrySearch Id="findDOTNETVersion" Root="HKLM" Key="SOFTWARE\dotnet\Setup\InstalledVersions\x64\sharedhost" Value="Version" Result="value" Variable="DOTNETVERSION" Bitness="always64" />
-	</Fragment>
-	<Fragment>
-		<util:RegistrySearch Id="findDOTNETDesktop" Root="HKLM" Key="SOFTWARE\dotnet\Setup\InstalledVersions\x64\sharedfx\Microsoft.WindowsDesktop.App" Result="exists" Variable="DOTNETDESKTOPINSTALLED" Bitness="always32" />
-	</Fragment>
-</Wix>

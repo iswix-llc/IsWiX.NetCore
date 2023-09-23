@@ -1,10 +1,9 @@
-﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
 	<Fragment>
-		<util:RegistrySearchRef Id="findDOTNETVersion"></util:RegistrySearchRef>
-		<util:RegistrySearchRef Id="findDOTNETDesktop"></util:RegistrySearchRef>
+		<netfx:DotNetCoreSearch RuntimeType="desktop" MajorVersion="7" Platform="x64" Variable="DOTNETDESKTOPVERSION"/>
 		<PackageGroup Id="DotNetDesktop7011Redist">
 			<ExePackage Id="DotNetDesktop7011"
-						DetectCondition="DOTNETDESKTOPINSTALLED and DOTNETVERSION &gt;= &quot;7.0.11&quot;"
+						DetectCondition="DOTNETDESKTOPVERSION &gt;= &quot;7.0.11&quot;"
 						Permanent="yes"
 						Vital="no"
 						InstallArguments="windowsdesktop-runtime-7.0.11-win-x64.exe /install /quiet /norestart"
